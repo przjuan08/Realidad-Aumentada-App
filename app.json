@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "SensorARApp",
+    "slug": "SensorARApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Esta aplicación utiliza la cámara para mostrar realidad aumentada.",
+        "NSLocationWhenInUseUsageDescription": "Esta aplicación utiliza tu ubicación para mostrar datos meteorológicos locales."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "La aplicación necesita acceso a la cámara para mostrar realidad aumentada."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "La aplicación necesita acceso a tu ubicación para mostrar datos meteorológicos locales."
+        }
+      ]
+    ]
+  }
+}
